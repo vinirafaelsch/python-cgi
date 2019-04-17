@@ -1,10 +1,9 @@
 #!/bin/bash
   
-echo "content-type: text/plain"
+echo "content-type: text/html"
 echo
 echo
-echo "<html> <head> <title> CGI script </title> </head>
-<body>"
+
 
 VAR=$(sed -n '1p')
 
@@ -12,15 +11,12 @@ name=$(echo $VAR | sed 's/\(name=\)\(.*\)\(\&action=.*\)/\2/;s/+/ /g')
 action=$(echo $VAR | sed 's/.*\&action=//')
 
 if [ "$action" = "start" ]; then
-	echo "startou" $name
-	$name &
+	#echo "startou" $name
+	#sh $name
+        #echo "senha" | su -S 
+        touch /tmp/teste.txt
 else
 	echo "finalizou"
-	killall $name
+	echo $(killall $name)
 fi
 
-service $name $action
-
-
-echo "</body>"
-echo "</html>"
