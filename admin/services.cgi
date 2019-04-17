@@ -14,7 +14,6 @@ echo "<form method=\"GET\" action=\"actionServices.cgi\">"
 echo "<b>Nome do servico: </b> 
 <input class='input' type='text' size=40 name=name value=\"\">"
 
-
 echo "<br/><br/>"
 
 echo '<input type="radio" name="action" value=create> Iniciar<br>
@@ -23,8 +22,8 @@ echo '<input type="radio" name="action" value=create> Iniciar<br>
 
 echo "<br/><br/>"
 
-echo "<input class='button is-link' type='submit' value='Enviar'>"
 echo "<a href='http://localhost/redes2/admin.sh' class='button is-danger'>Voltar</a>"
+echo "<input class='button is-link' type='submit' value='Enviar'>"
 
 echo "</form>"
 echo "</div>"

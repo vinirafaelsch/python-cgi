@@ -13,7 +13,6 @@ echo "<form method=\"GET\" action=\"actionServices.cgi\">"
 echo "<b>Nome do servico: </b> 
 <input class='input' type='text' size=40 name=name value=\"\">"
 
-action=$(echo $VAR | sed 's/\(action=\)\(.*\)')
 echo $action
 if [ "$QUERY_STRING" = "action=create"]; then
 	echo '<input type="hidden" name="action" value="create">'
