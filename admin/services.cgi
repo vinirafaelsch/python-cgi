@@ -16,9 +16,9 @@ echo "<b>Nome do servico: </b>
 
 echo "<br/><br/>"
 
-echo '<input type="radio" name="action" value=create> Iniciar<br>
+echo '<input type="radio" name="action" value=start> Iniciar<br>
   <input type="radio" name="action" value=restart> Reiniciar<br>
-  <input type="radio" name="action" value=finish> Finalizar'
+  <input type="radio" name="action" value=stop> Finalizar'
 
 echo "<br/><br/>"
 
