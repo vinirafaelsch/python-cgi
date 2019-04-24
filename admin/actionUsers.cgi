@@ -10,13 +10,10 @@ VAR=$(sed -n '1p')
 name=$(echo $VAR | sed 's/\(name=\)\(.*\)\(\&action=.*\)/\2/;s/+/ /g')
 action=$(echo $VAR | sed 's/.*\&action=//')
 
-if [ "$action" = "start" ]; then
-	#echo "startou" $name
-	#sh $name
-        #echo "senha" | su -S 
-        touch /tmp/teste.txt
+if [ "$action" = "adduser" ]; then
+	sudo $action --disabled-password --gecos "" $name
 else
-	echo "finalizou"
-	echo $(killall $name)
+	echo "Usuario $name deletado com sucesso!"
+	sudo $action $name
 fi
 

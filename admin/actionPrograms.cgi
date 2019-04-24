@@ -11,6 +11,7 @@ name=$(echo $VAR | sed 's/\(name=\)\(.*\)\(\&action=.*\)/\2/;s/+/ /g')
 action=$(echo $VAR | sed 's/.*\&action=//')
 
 if [ "$action" = "start" ]; then
+	cd ~/
 	sudo $name &
 else
 	echo "finalizou"
