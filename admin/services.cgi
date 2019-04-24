@@ -9,7 +9,7 @@ echo "</head>"
 echo "<body>"
 echo "<div class='container'>"
 echo "<h1 class='title has-text-centered'>Controle de servicos</h1>"
-echo "<form method=\"GET\" action=\"actionServices.cgi\">"
+echo "<form method=\"POST\" action=\"actionServices.cgi\">"
 
 echo "<b>Nome do servico: </b> 
 <input class='input' type='text' size=40 name=name value=\"\">"

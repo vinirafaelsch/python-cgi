@@ -3,10 +3,11 @@
 echo "content-type: text/html"
 echo
 echo
-echo "<html> <head> <title> CGI script </title> </head>
-<body>"
-  
-echo $QUERY_STRING 
 
-echo "</body>"
-echo "</html>"
+VAR=$(sed -n '1p')
+
+name=$(echo $VAR | sed 's/\(name=\)\(.*\)\(\&action=.*\)/\2/;s/+/ /g')
+action=$(echo $VAR | sed 's/.*\&action=//')
+
+echo $name
+echo $action
